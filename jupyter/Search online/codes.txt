@@ -1,0 +1,8 @@
+import webbrowser
+import xlrd
+
+wb=xlrd. open_workbook_xls("search.xls")
+sht=wb.sheet_by_name("Sheet1")
+
+for x in range(sht.nrows):
+	webbrowser.open(sht.cell(x,0).value)
